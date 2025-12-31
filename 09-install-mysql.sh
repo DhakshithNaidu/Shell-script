@@ -9,7 +9,12 @@ else
     echo "You are root user"
 fi
 
-yum install mariadb-server -y
-#systemctl start mysql
-#systemctl enable mysql
-#echo "mysql install successfully"
+    yum install mysql -y
+
+if [ $? -ne 0 ]  
+then 
+    echo "ERROR : Installing mysql is failed"
+    exit 1
+else
+    echo "Installing mysql Successfully"
+fi           
