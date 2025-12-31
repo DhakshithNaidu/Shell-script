@@ -9,7 +9,7 @@ else
     echo "You are root user"
 fi
 
-yum install mysql -y
-systemctl start mysql
-systemctl enable mysql
-echo "mysql install successfully"
+yum install mariadb-server -y
+#systemctl start mysql
+#systemctl enable mysql
+#echo "mysql install successfully"
