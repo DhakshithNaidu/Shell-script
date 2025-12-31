@@ -2,10 +2,14 @@
 
 ID=$(id -u)
 if [ $ID -ne 0 ]
- then 
+then 
     echo "ERROR :: please run this script with root access"
- else 
+    exit 1
+else 
     echo "You are root user"
 fi
 
-yum install mariadb-server -y
+yum install mysql -y
+systemctl start mysql
+systemctl enable mysql
+echo "mysql install successfully"
