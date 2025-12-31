@@ -8,4 +8,4 @@ if [ $ID -ne 0 ]
     echo "You are root user"
 fi
 
- sudo yum install mysql -y
+yum install mariadb-server -y
